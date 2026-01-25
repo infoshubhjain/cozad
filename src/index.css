@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+/* 
+  AgriTech AI - Precision Agriculture Design System
+  Fresh, professional, nature-meets-technology aesthetic
+*/
+
+@layer base {
+  :root {
+    /* Core palette - Fresh greens and earthy tones */
+    --background: 120 20% 99%;
+    --foreground: 220 25% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 12%;
+
+    /* Primary - Vibrant agricultural green */
+    --primary: 142 62% 38%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Warm earth tone */
+    --secondary: 32 45% 94%;
+    --secondary-foreground: 32 60% 25%;
+
+    /* Muted - Soft sage */
+    --muted: 120 15% 94%;
+    --muted-foreground: 220 15% 45%;
+
+    /* Accent - Sky blue for tech feel */
+    --accent: 199 89% 48%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 120 15% 88%;
+    --input: 120 15% 88%;
+    --ring: 142 62% 38%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(142 62% 38%) 0%, hsl(160 50% 30%) 50%, hsl(199 89% 35%) 100%);
+    --gradient-earth: linear-gradient(180deg, hsl(32 45% 94%) 0%, hsl(120 20% 99%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(120 15% 97%) 100%);
+    --shadow-soft: 0 4px 20px -4px hsl(142 62% 38% / 0.15);
+    --shadow-card: 0 8px 32px -8px hsl(220 25% 12% / 0.1);
+    --shadow-glow: 0 0 40px hsl(142 62% 38% / 0.25);
+
+    /* Sidebar */
+    --sidebar-background: 120 20% 99%;
+    --sidebar-foreground: 220 25% 12%;
+    --sidebar-primary: 142 62% 38%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 120 15% 94%;
+    --sidebar-accent-foreground: 220 25% 12%;
+    --sidebar-border: 120 15% 88%;
+    --sidebar-ring: 142 62% 38%;
+  }
+
+  .dark {
+    --background: 220 25% 8%;
+    --foreground: 120 15% 94%;
+
+    --card: 220 25% 12%;
+    --card-foreground: 120 15% 94%;
+
+    --popover: 220 25% 12%;
+    --popover-foreground: 120 15% 94%;
+
+    --primary: 142 55% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 20% 18%;
+    --secondary-foreground: 120 15% 94%;
+
+    --muted: 220 20% 18%;
+    --muted-foreground: 120 10% 60%;
+
+    --accent: 199 80% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 142 55% 50%;
+
+    --sidebar-background: 220 25% 8%;
+    --sidebar-foreground: 120 15% 94%;
+    --sidebar-primary: 142 55% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 18%;
+    --sidebar-accent-foreground: 120 15% 94%;
+    --sidebar-border: 220 20% 20%;
+    --sidebar-ring: 142 55% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Outfit', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-hero);
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-earth {
+    background: var(--gradient-earth);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20;
+  }
+}
