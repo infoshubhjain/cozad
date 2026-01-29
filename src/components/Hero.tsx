@@ -20,7 +20,7 @@ const Hero = () => {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(32,45%,94%)] via-transparent to-transparent" />
       </div>
 
       {/* Floating Icons */}
@@ -76,8 +76,8 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl"
           >
-            Transform your farming operations with intelligent IoT sensors, 
-            machine learning analytics, and automated decision-making. 
+            Transform your farming operations with intelligent IoT sensors,
+            machine learning analytics, and automated decision-making.
             Increase yields while reducing water and resource consumption.
           </motion.p>
 
@@ -98,24 +98,7 @@ const Hero = () => {
             </Button>
           </motion.div>
 
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-wrap gap-8 mt-12 pt-8 border-t border-border/50"
-          >
-            {[
-              { value: "40%", label: "Yield Increase" },
-              { value: "60%", label: "Water Saved" },
-              { value: "10K+", label: "Farms Connected" },
-            ].map((stat, index) => (
-              <div key={index} className="text-center sm:text-left">
-                <div className="text-3xl font-bold text-gradient">{stat.value}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
-          </motion.div>
+
         </div>
       </div>
 

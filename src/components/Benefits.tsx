@@ -12,7 +12,7 @@ const AnimatedCounter = ({ value, suffix = "", duration = 2 }: { value: number; 
       let start = 0;
       const end = value;
       const incrementTime = (duration * 1000) / end;
-      
+
       const timer = setInterval(() => {
         start += 1;
         setCount(start);
@@ -29,36 +29,7 @@ const AnimatedCounter = ({ value, suffix = "", duration = 2 }: { value: number; 
 };
 
 const Benefits = () => {
-  const stats = [
-    {
-      icon: TrendingUp,
-      value: 40,
-      suffix: "%",
-      label: "Yield Increase",
-      description: "Average improvement in crop yield per hectare",
-    },
-    {
-      icon: Droplets,
-      value: 60,
-      suffix: "%",
-      label: "Water Reduction",
-      description: "Less water consumption through precision irrigation",
-    },
-    {
-      icon: AlertTriangle,
-      value: 85,
-      suffix: "%",
-      label: "Early Detection",
-      description: "Disease and pest detection before visible symptoms",
-    },
-    {
-      icon: Settings,
-      value: 90,
-      suffix: "%",
-      label: "Automation Rate",
-      description: "Farming decisions made without human intervention",
-    },
-  ];
+
 
   const objectives = [
     "Increase crop yield per hectare through data-driven optimization",
@@ -66,6 +37,7 @@ const Benefits = () => {
     "Enable early detection of stress, disease, and nutrient deficiency",
     "Continuously adapt farming decisions using learning models",
     "Operate with minimal human intervention for efficiency",
+    "Integrate advanced automation technology for seamless farm management",
   ];
 
   return (
@@ -78,26 +50,7 @@ const Benefits = () => {
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-20">
-          {stats.map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="text-center p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300"
-            >
-              <stat.icon className="w-10 h-10 text-white/80 mx-auto mb-4" />
-              <div className="text-4xl lg:text-5xl font-bold mb-2">
-                <AnimatedCounter value={stat.value} suffix={stat.suffix} />
-              </div>
-              <div className="text-lg font-semibold mb-1">{stat.label}</div>
-              <div className="text-sm text-white/70">{stat.description}</div>
-            </motion.div>
-          ))}
-        </div>
+
 
         {/* Objectives */}
         <motion.div

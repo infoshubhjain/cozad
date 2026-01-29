@@ -16,64 +16,71 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-foreground text-white/80 py-16 lg:py-20">
+    <footer className="bg-foreground text-white/80 py-12">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-12 mb-12">
-          {/* Brand */}
-          <div className="col-span-2">
-            <a href="#" className="flex items-center gap-2 mb-4">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-12">
+          {/* Brand & Contact */}
+          <div className="space-y-6">
+            <a href="#" className="flex items-center gap-2">
               <div className="w-10 h-10 rounded-xl bg-gradient-hero flex items-center justify-center">
                 <Leaf className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold text-white">AgriVision</span>
             </a>
-            <p className="text-white/60 text-sm max-w-xs mb-6">
+            <p className="text-white/60 text-sm max-w-xs leading-relaxed">
               AI and IoT-driven precision agriculture for sustainable, 
               high-yield farming operations worldwide.
             </p>
-            <div className="flex gap-4">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-primary transition-colors duration-300"
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
+            
+            <div className="space-y-3 pt-2">
+              <div className="flex items-center gap-3 text-white/70 hover:text-white transition-colors">
+                <span className="text-sm">+1 217-979-5689</span>
+              </div>
+              <div className="flex items-center gap-3 text-white/70 hover:text-white transition-colors">
+                <span className="text-sm">info.shubhjain@illinois.edu</span>
+              </div>
+              <div className="flex items-center gap-3 text-white/70 hover:text-white transition-colors">
+                <span className="text-sm">Urbana-Champaign, IL</span>
+              </div>
+            </div>
+
+            <div className="flex gap-4 pt-2">
+              <a
+                href="https://github.com/infoshubhjain/cozad"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-primary transition-colors duration-300"
+              >
+                <Github className="w-5 h-5" />
+              </a>
             </div>
           </div>
 
-          {/* Links */}
-          {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category}>
-              <h4 className="text-white font-semibold mb-4">{category}</h4>
+          {/* Links - Simplified */}
+          <div className="grid grid-cols-2 gap-12 sm:gap-24">
+            <div>
+              <h4 className="text-white font-semibold mb-4">Product</h4>
               <ul className="space-y-2">
-                {links.map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
-                      className="text-sm text-white/60 hover:text-white transition-colors duration-200"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
+                <li><a href="#features" className="text-sm text-white/60 hover:text-white transition-colors">Features</a></li>
+                <li><a href="#technology" className="text-sm text-white/60 hover:text-white transition-colors">Technology</a></li>
+                <li><a href="#benefits" className="text-sm text-white/60 hover:text-white transition-colors">Benefits</a></li>
               </ul>
             </div>
-          ))}
+            <div>
+              <h4 className="text-white font-semibold mb-4">Company</h4>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-sm text-white/60 hover:text-white transition-colors">About Us</a></li>
+                <li><a href="#" className="text-sm text-white/60 hover:text-white transition-colors">Contact</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+        {/* Bottom Bar - Flat */}
+        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-white/50">
             © 2026 AgriVision. All rights reserved.
           </p>
-          <div className="flex gap-6 text-sm text-white/50">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-white transition-colors">Cookie Settings</a>
-          </div>
         </div>
       </div>
     </footer>

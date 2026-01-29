@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import { 
-  Database, 
-  Satellite, 
-  Server, 
+import {
+  Database,
+  Satellite,
+  Server,
   Smartphone,
   ArrowRight,
-  CheckCircle2
+  CheckCircle2,
+  Bot
 } from "lucide-react";
 
 const Technology = () => {
@@ -19,7 +20,7 @@ const Technology = () => {
       color: "from-primary to-primary/70",
     },
     {
-      number: "02", 
+      number: "02",
       title: "Connectivity & Edge",
       description: "Low-power wide-area protocols with edge processing for reduced latency",
       icon: Server,
@@ -41,6 +42,14 @@ const Technology = () => {
       icon: Smartphone,
       items: ["Yield prediction models", "Disease detection CNN", "Reinforcement learning", "Real-time recommendations"],
       color: "from-primary to-accent",
+    },
+    {
+      number: "05",
+      title: "Automation Technology",
+      description: "Advanced robotics and control systems for hands-off farm management",
+      icon: Bot,
+      items: ["Autonomous tractors", "Robotic harvesters", "Precision spraying", "Smart irrigation control"],
+      color: "from-accent to-primary",
     },
   ];
 
@@ -69,7 +78,7 @@ const Technology = () => {
             <span className="text-gradient">Intelligence Layers</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Our production-grade architecture seamlessly integrates sensing, 
+            Our production-grade architecture seamlessly integrates sensing,
             processing, and actuation for truly autonomous farming.
           </p>
         </motion.div>
