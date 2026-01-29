@@ -28,8 +28,8 @@ export const CTA = () => {
               <span className="text-gradient">Farm Operations?</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              Join thousands of forward-thinking farmers who are already using 
-              AI and IoT to maximize yields, minimize waste, and future-proof 
+              Join thousands of forward-thinking farmers who are already using
+              AI and IoT to maximize yields, minimize waste, and future-proof
               their agricultural operations.
             </p>
 
@@ -38,17 +38,14 @@ export const CTA = () => {
                 Schedule Demo
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="heroOutline" size="xl">
-                Contact Sales
-              </Button>
             </div>
 
             {/* Contact Info */}
             <div className="space-y-4">
               {[
-                { icon: Mail, text: "contact@agrivision.ai" },
-                { icon: Phone, text: "+1 (555) 123-4567" },
-                { icon: MapPin, text: "San Francisco, CA" },
+                { icon: Mail, text: "info.shubhjain@illinois.edu" },
+                { icon: Phone, text: "+1 217-979-5689" },
+                { icon: MapPin, text: "Urbana-Champaign, IL" },
               ].map((item, index) => (
                 <div key={index} className="flex items-center gap-3 text-muted-foreground">
                   <item.icon className="w-5 h-5 text-primary" />
